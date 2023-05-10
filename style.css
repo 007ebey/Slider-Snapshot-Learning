@@ -1,0 +1,16 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}

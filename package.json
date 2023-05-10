@@ -1,0 +1,9 @@
+{
+  "name": "js",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "17.0.0",
+    "react-dom": "17.0.0"
+  }
+}
