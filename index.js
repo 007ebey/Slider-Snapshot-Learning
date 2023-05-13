@@ -20,14 +20,24 @@ class ImageSlider extends React.Component {
       ],
       isSliding: false,
       transitionDuration: 1000,
+      count: 0,
     };
     this.sliderRef = React.createRef();
   }
 
   componentDidMount() {
     setInterval(() => {
+      this.setState((prevState) => {
+        prevState.count += 1;
+        return prevState;
+      });
+      this.setState((prevState) => {
+        prevState.count += 1;
+        return prevState;
+      });
+      console.log(this.state.count);
       this.slideImage();
-    }, 10000);
+    }, 1000);
   }
 
   slideImage = () => {
@@ -71,8 +81,11 @@ class ImageSlider extends React.Component {
   render() {
     const { images, currentImage } = this.state;
     return (
-      <div ref={this.sliderRef} className="slider">
-        <img src={images[currentImage]} alt={`Current Image`} />
+      <div>
+        <span>{this.state.count}</span>
+        <div ref={this.sliderRef} className="slider">
+          <img src={images[currentImage]} alt={`Current Image`} />
+        </div>
       </div>
     );
   }
